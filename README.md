@@ -2,6 +2,7 @@
 
 #### Overview
 1. Angular version: Angular 4.x
+2. You need to install node, npm, yarn, json-server(for mock)
 
 #### How to use
 
