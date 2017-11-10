@@ -1,0 +1,9 @@
+<md-toolbar color="primary">
+  <button md-icon-button (click)="onClick()" *ngIf="(auth$ | async)?.user">
+    <md-icon svgIcon="500px"></md-icon>
+  </button>
+  <span> Workbench </span>
+  <span class="fill-remaining-space"></span>
+  <span><a md-button *ngIf="(auth$ | async)?.user" (click)="logout()">Exit</a></span>
+  <md-slide-toggle (change)="onChange($event.checked)">Dark</md-slide-toggle>
+</md-toolbar>

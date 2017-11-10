@@ -1,36 +1,38 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit(form, $event)">
   <md-card class="card">
     <md-tab-group [dynamicHeight]="true" [selectedIndex]="selectedTab" (selectChange)="onTabChange($event.index)">
-      <md-tab label="帐号信息">
+      <md-tab label="Account Info">
         <md-input-container class="full-width">
-          <input mdInput placeholder="电子邮件" formControlName="email">
+          <input mdInput placeholder="Your Email" formControlName="email">
         </md-input-container>
         <md-input-container class="full-width">
-          <input mdInput type="text" placeholder="您的名字" formControlName="name">
+          <input mdInput type="text" placeholder="Your Name" formControlName="name">
         </md-input-container>
         <md-input-container class="full-width">
-          <input mdInput type="password" placeholder="您的密码" formControlName="password">
+          <input mdInput type="password" placeholder="Yout Password" formControlName="password">
         </md-input-container>
         <md-input-container class="full-width">
-          <input mdInput type="password" placeholder="为避免失误请再次输入" formControlName="repeat">
+          <input mdInput type="password" placeholder="Confirm Password" formControlName="repeat">
         </md-input-container>
         <app-image-list-select
           [useSvgIcon]="true"
           [cols]="6"
-          [title]="'选择头像：'"
+          [title]="'Select Avatar'"
           [items]="avatars$ | async"
           formControlName="avatar">
         </app-image-list-select>
         <div class="full-width action-area">
-          <button md-raised-button type="button" (click)="nextTab()">下一步</button>
+          <button md-raised-button type="button" (click)="nextTab()">Next</button>
           <span class="fill-remaining-space"></span>
           <span>
-            <span>已有账户？ <a routerLink="/login">登录</a></span>
-            <span>忘记 <a routerLink="/forgot">密码？</a></span>
+              <p>
+                <a md-button routerLink="/login">Sign In</a>
+                <a md-button routerLink="/forgot">Forgot</a>
+              </p>
           </span>
         </div>
       </md-tab>
-      <md-tab label="个人信息">
+      <md-tab label="User Information">
         <app-indentity-input formControlName="identity" class="full-width control-padding">
         </app-indentity-input>
         <div class="full-width control-padding">
@@ -40,12 +42,14 @@
           <app-area-list formControlName="address"></app-area-list>
         </div>
         <div class="full-width">
-          <button md-raised-button type="button" (click)="prevTab()">上一步</button>
-          <button md-raised-button type="submit" [disabled]="!form.valid">注册</button>
+          <button md-raised-button type="button" (click)="prevTab()">Previous</button>
+          <button md-raised-button type="submit" [disabled]="!form.valid">Register</button>
           <span class="fill-remaining-space"></span>
           <span>
-            <span>已有账户？ <a routerLink="/login">登录</a></span>
-            <span>忘记 <a routerLink="/forgot">密码？</a></span>
+              <p>
+                <a md-button routerLink="/login">Sign In</a>
+                <a md-button routerLink="/forgot">Forgot</a>
+              </p>
           </span>
         </div>
       </md-tab>

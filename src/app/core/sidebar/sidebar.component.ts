@@ -1,8 +1,8 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Output} from '@angular/core';
-import {getDate} from 'date-fns';
-import {Store} from '@ngrx/store';
-import {Observable} from 'rxjs/Observable';
-import {Auth, Project} from '../../domain';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
+import { getDate } from 'date-fns';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+import { Auth, Project } from '../../domain';
 import * as fromRoot from '../../reducers';
 import * as actions from '../../actions/project.action';
 

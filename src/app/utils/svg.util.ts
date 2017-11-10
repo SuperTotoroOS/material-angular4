@@ -2,7 +2,7 @@ import { MdIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
 /**
- * a utility to load all needed svg resources to the app for md-icon to use
+ * svg工具类，如果使用SVG图标，需要在此声明
  *
  * @param ir a MdIconRegistry instance to use external svg resources for md-icon use
  * @param ds a DomSanitizer instance to bypass security and return a url
@@ -13,6 +13,7 @@ export const loadSvgResources = (ir: MdIconRegistry, ds: DomSanitizer) => {
   const sidebarDir = `${imgDir}/sidebar`;
   const iconDir = `${imgDir}/icons`;
   const dayDir = `${imgDir}/days`;
+
   ir.addSvgIconSetInNamespace('avatars', ds.bypassSecurityTrustResourceUrl(`${avatarDir}/avatars.svg`));
   ir.addSvgIcon('unassigned', ds.bypassSecurityTrustResourceUrl(`${avatarDir}/unassigned.svg`));
   ir.addSvgIcon('project', ds.bypassSecurityTrustResourceUrl(`${sidebarDir}/project.svg`));
@@ -21,6 +22,7 @@ export const loadSvgResources = (ir: MdIconRegistry, ds: DomSanitizer) => {
   ir.addSvgIcon('week', ds.bypassSecurityTrustResourceUrl(`${sidebarDir}/week.svg`));
   ir.addSvgIcon('day', ds.bypassSecurityTrustResourceUrl(`${sidebarDir}/day.svg`));
   ir.addSvgIcon('move', ds.bypassSecurityTrustResourceUrl(`${iconDir}/move.svg`));
+  ir.addSvgIcon('500px', ds.bypassSecurityTrustResourceUrl(`${iconDir}/500px.svg`));
   const days = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
     11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
