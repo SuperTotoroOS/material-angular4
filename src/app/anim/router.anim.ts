@@ -1,4 +1,4 @@
-import {animate, state, style, transition, trigger, group, AnimationTriggerMetadata} from '@angular/animations';
+import { animate, state, style, transition, trigger, group, AnimationTriggerMetadata } from '@angular/animations';
 
 export const slideToRight = trigger('routeAnim', [
   state('void', style({'width': '100%', 'height': '100%'})),

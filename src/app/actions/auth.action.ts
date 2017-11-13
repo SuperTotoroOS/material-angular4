@@ -1,6 +1,6 @@
-import {Action} from '@ngrx/store';
-import {type} from '../utils/type.util';
-import {Auth, Err, User} from '../domain';
+import { Action } from '@ngrx/store';
+import { type } from '../utils/type.util';
+import { Auth, Err, User } from '../domain';
 
 export const ActionTypes = {
   LOGIN: type('[Auth] Login'),
@@ -13,6 +13,7 @@ export const ActionTypes = {
 };
 
 export class LoginAction implements Action {
+
   type = ActionTypes.LOGIN;
 
   constructor(public payload: { email: string, password: string }) {
@@ -20,6 +21,7 @@ export class LoginAction implements Action {
 }
 
 export class LoginSuccessAction implements Action {
+
   type = ActionTypes.LOGIN_SUCCESS;
 
   constructor(public payload: Auth) {
@@ -27,6 +29,7 @@ export class LoginSuccessAction implements Action {
 }
 
 export class LoginFailAction implements Action {
+
   type = ActionTypes.LOGIN_FAIL;
 
   constructor(public payload: Err) {
@@ -34,6 +37,7 @@ export class LoginFailAction implements Action {
 }
 
 export class RegisterAction implements Action {
+
   type = ActionTypes.REGISTER;
 
   constructor(public payload: User) {
@@ -41,6 +45,7 @@ export class RegisterAction implements Action {
 }
 
 export class RegisterSuccessAction implements Action {
+
   type = ActionTypes.REGISTER_SUCCESS;
 
   constructor(public payload: Auth) {
@@ -55,17 +60,13 @@ export class RegisterFailAction implements Action {
 }
 
 export class LogoutAction implements Action {
+
   type = ActionTypes.LOGOUT;
 
   constructor(public payload: Auth) {
   }
 }
 
-export type Actions
-  = LoginAction
-  | LoginSuccessAction
-  | LoginFailAction
-  | RegisterAction
-  | RegisterSuccessAction
-  | RegisterFailAction
-  | LogoutAction;
+export type Actions = LoginAction | LoginSuccessAction | LoginFailAction |
+                      RegisterAction | RegisterSuccessAction | RegisterFailAction |
+                      LogoutAction;
