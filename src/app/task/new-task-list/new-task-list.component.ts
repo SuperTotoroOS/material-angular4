@@ -22,12 +22,12 @@ export class NewTaskListComponent implements OnInit {
       this.form = this.fb.group({
         name: ['', Validators.compose([Validators.required, Validators.maxLength(10)])]
       });
-      this.dialogTitle = '创建列表：';
+      this.dialogTitle = 'Create list';
     } else {
       this.form = this.fb.group({
         name: [this.data.name, Validators.compose([Validators.required, Validators.maxLength(10)])],
       });
-      this.dialogTitle = '修改列表：';
+      this.dialogTitle = 'Update list';
     }
   }
 

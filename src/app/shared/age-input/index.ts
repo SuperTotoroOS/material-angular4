@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, forwardRef, OnInit, OnDestroy, Input} from '@angular/core';
+import { ChangeDetectionStrategy, Component, forwardRef, OnInit, OnDestroy, Input } from '@angular/core';
 import { ControlValueAccessor, FormBuilder, FormControl, FormGroup, NG_VALIDATORS, NG_VALUE_ACCESSOR, Validators } from '@angular/forms';
 import {
   subYears,
@@ -30,16 +30,16 @@ export interface Age {
     <div [formGroup]="form" class="age-input">
       <div>
         <md-input-container>
-          <input mdInput [mdDatepicker]="birthPicker" type="text" placeholder="出生日期" formControlName="birthday" >
+          <input mdInput [mdDatepicker]="birthPicker" type="text" placeholder="Birthday" formControlName="birthday" >
           <button mdSuffix [mdDatepickerToggle]="birthPicker" type="button"></button>
-          <md-error>日期不正确</md-error>
+          <md-error>Illegal date</md-error>
         </md-input-container>
         <md-datepicker touchUi="true" #birthPicker></md-datepicker>
       </div>
       <ng-container formGroupName="age">
         <div class="age-num">
           <md-input-container>
-            <input mdInput type="number" placeholder="年龄" formControlName="ageNum">
+            <input mdInput type="number" placeholder="Age" formControlName="ageNum">
           </md-input-container>
         </div>
         <div>
@@ -49,7 +49,7 @@ export interface Age {
             </md-button-toggle>
           </md-button-toggle-group>
         </div>
-        <md-error class="mat-body-2" *ngIf="form.get('age').hasError('ageInvalid')">年龄或单位不正确</md-error>
+        <md-error class="mat-body-2" *ngIf="form.get('age').hasError('ageInvalid')">Illegal age or unit</md-error>
       </ng-container>
     </div>
     `,
@@ -83,9 +83,9 @@ export class AgeInputComponent implements ControlValueAccessor, OnInit, OnDestro
   selectedUnit = AgeUnit.Year;
   form: FormGroup;
   ageUnits = [
-    {value: AgeUnit.Year, label: '岁'},
-    {value: AgeUnit.Month, label: '月'},
-    {value: AgeUnit.Day, label: '天'}
+    {value: AgeUnit.Year, label: 'Year'},
+    {value: AgeUnit.Month, label: 'Month'},
+    {value: AgeUnit.Day, label: 'Day'}
   ];
   dateOfBirth;
   @Input() daysTop = 90;
@@ -137,8 +137,8 @@ export class AgeInputComponent implements ControlValueAccessor, OnInit, OnDestro
       .debug('[Age-Input][Merged]:');
     this.subBirth = merged$.subscribe(date => {
       const age = this.toAge(date.date);
-      if(date.from === 'birthday') {
-        if(age.age === ageNum.value && age.unit === ageUnit.value) {
+      if (date.from === 'birthday') {
+        if (age.age === ageNum.value && age.unit === ageUnit.value) {
           return;
         }
         ageUnit.patchValue(age.unit, {emitEvent: false, emitModelToViewChange: true, emitViewToModelChange: true});
@@ -148,7 +148,7 @@ export class AgeInputComponent implements ControlValueAccessor, OnInit, OnDestro
 
       } else {
         const ageToCompare = this.toAge(this.form.get('birthday').value);
-        if(age.age !== ageToCompare.age || age.unit !== ageToCompare.unit) {
+        if (age.age !== ageToCompare.age || age.unit !== ageToCompare.unit) {
           this.form.get('birthday').patchValue(date.date, {emitEvent: false});
           this.propagateChange(date.date);
         }
@@ -157,7 +157,7 @@ export class AgeInputComponent implements ControlValueAccessor, OnInit, OnDestro
   }
 
   ngOnDestroy() {
-    if(this.subBirth) {
+    if (this.subBirth) {
       this.subBirth.unsubscribe();
     }
   }

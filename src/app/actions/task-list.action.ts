@@ -1,6 +1,6 @@
-import {Action} from '@ngrx/store';
-import {type} from '../utils/type.util';
-import {Project, TaskList} from '../domain';
+import { Action } from '@ngrx/store';
+import { type } from '../utils/type.util';
+import { Project, TaskList } from '../domain';
 
 export const ActionTypes = {
   ADD: type('[TaskList] Add'),

@@ -1,7 +1,7 @@
-import {Inject, Injectable} from '@angular/core';
-import {Headers, Http} from '@angular/http';
-import {Observable} from 'rxjs/Observable';
-import {User, Project} from '../domain';
+import { Inject, Injectable } from '@angular/core';
+import { Headers, Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { User, Project } from '../domain';
 
 @Injectable()
 export class UserService {

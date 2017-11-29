@@ -1,6 +1,6 @@
-import {Action} from '@ngrx/store';
-import {User, Project} from '../domain';
-import {type} from '../utils/type.util';
+import { Action } from '@ngrx/store';
+import { User, Project } from '../domain';
+import { type } from '../utils/type.util';
 
 export interface UserProject {
   user: User;

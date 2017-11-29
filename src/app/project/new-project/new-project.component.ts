@@ -27,14 +27,14 @@ export class NewProjectComponent implements OnInit {
         desc: [this.data.project.desc, Validators.maxLength(40)],
         coverImg: [this.data.project.coverImg, Validators.required]
       });
-      this.dialogTitle = '修改项目：';
+      this.dialogTitle = 'Update project';
     } else {
       this.form = this.fb.group({
         name: ['', Validators.compose([Validators.required, Validators.maxLength(20)])],
         desc: ['', Validators.maxLength(40)],
         coverImg: [this.data.img, Validators.required]
       });
-      this.dialogTitle = '创建项目：';
+      this.dialogTitle = 'Create project';
     }
 
   }

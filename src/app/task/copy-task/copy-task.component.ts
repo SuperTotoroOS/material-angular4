@@ -22,7 +22,7 @@ export class CopyTaskComponent implements OnInit {
   ngOnInit() {
     this.lists$ = this.data.lists;
     if (this.data.type === 'move') {
-      this.dialogTitle = '移动所有任务';
+      this.dialogTitle = 'Move all tasks';
     }
     this.form = this.fb.group({
       targetList: ['', Validators.required]

@@ -1,5 +1,5 @@
-import {Observable} from 'rxjs/Observable';
-import {environment} from '../../environments/environment';
+import { Observable } from 'rxjs/Observable';
+import { environment } from '../../environments/environment';
 
 declare module 'rxjs/Observable' {
   interface Observable<T> {

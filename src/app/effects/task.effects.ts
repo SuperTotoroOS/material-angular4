@@ -1,9 +1,9 @@
-import {Injectable} from '@angular/core';
-import {Actions, Effect, toPayload} from '@ngrx/effects';
-import {Action, Store} from '@ngrx/store';
-import {Observable} from 'rxjs/Observable';
-import {of} from 'rxjs/observable/of';
-import {TaskService} from '../services';
+import { Injectable } from '@angular/core';
+import { Actions, Effect, toPayload } from '@ngrx/effects';
+import { Action, Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+import { of} from 'rxjs/observable/of';
+import { TaskService } from '../services';
 import * as actions from '../actions/task.action';
 import * as fromRoot from '../reducers';
 

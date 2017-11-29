@@ -16,15 +16,15 @@ export class NewTaskComponent implements OnInit {
   delInvisible = true;
   priorities: { label: string; value: number }[] = [
     {
-      label: '普通',
+      label: 'NOMAL',
       value: 3
     },
     {
-      label: '重要',
+      label: 'IMPORTANT',
       value: 2
     },
     {
-      label: '紧急',
+      label: 'URGENT',
       value: 1
     },
   ];
@@ -44,7 +44,7 @@ export class NewTaskComponent implements OnInit {
         followers: [[]],
         remark: ['',  Validators.maxLength(40)]
       });
-      this.dialogTitle = '创建任务：';
+      this.dialogTitle = 'Create task';
       this.delInvisible = true;
     } else {
       this.form = this.fb.group({
@@ -56,7 +56,7 @@ export class NewTaskComponent implements OnInit {
         followers: [this.data.task.participants ? [...this.data.task.participants] : []],
         remark: [this.data.task.remark, Validators.maxLength(40)]
       });
-      this.dialogTitle = '修改任务：';
+      this.dialogTitle = 'Update task';
       this.delInvisible = false;
     }
   }

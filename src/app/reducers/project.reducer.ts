@@ -1,6 +1,6 @@
-import {Project} from '../domain';
-import {createSelector} from 'reselect';
-import {covertArrToObj, buildObjFromArr} from '../utils/reduer.util';
+import { Project } from '../domain';
+import { createSelector } from 'reselect';
+import { covertArrToObj, buildObjFromArr } from '../utils/reduer.util';
 import * as actions from '../actions/project.action';
 
 export interface State {

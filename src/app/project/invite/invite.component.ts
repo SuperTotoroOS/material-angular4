@@ -18,7 +18,7 @@ export class InviteComponent implements OnInit {
 
   ngOnInit() {
     this.members = [...this.data.members];
-    this.dialogTitle = this.data.dialogTitle ? this.data.dialogTitle : '邀请成员';
+    this.dialogTitle = this.data.dialogTitle ? this.data.dialogTitle : 'Invite members';
   }
 
   onSubmit(ev: Event, {value, valid}) {

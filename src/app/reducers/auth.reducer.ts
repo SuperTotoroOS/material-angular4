@@ -1,4 +1,4 @@
-import {Auth} from '../domain';
+import { Auth } from '../domain';
 import * as actions from '../actions/auth.action';
 
 export const initialState: Auth = {};

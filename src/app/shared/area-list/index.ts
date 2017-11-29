@@ -1,10 +1,10 @@
-import {Component, OnInit, ChangeDetectionStrategy, forwardRef, OnDestroy} from '@angular/core';
-import {ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {getProvinces, getCitiesByProvince, getAreasByCity} from '../../utils/area.util';
-import {Observable} from 'rxjs/Observable';
-import {Subject} from 'rxjs/Subject';
-import {Subscription} from 'rxjs/Subscription';
-import {Address} from '../../domain';
+import { Component, OnInit, ChangeDetectionStrategy, forwardRef, OnDestroy } from '@angular/core';
+import { ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { getProvinces, getCitiesByProvince, getAreasByCity } from '../../utils/area.util';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+import { Subscription } from 'rxjs/Subscription';
+import { Address } from '../../domain';
 
 @Component({
   selector: 'app-area-list',
@@ -12,7 +12,7 @@ import {Address} from '../../domain';
     <div class="address-group">
       <div>
         <md-select
-          placeholder="请选择省份"
+          placeholder="Select province"
           [(ngModel)]="_address.province"
           (change)="onProvinceChange()">
           <md-option *ngFor="let p of provinces" [value]="p">
@@ -22,7 +22,7 @@ import {Address} from '../../domain';
       </div>
       <div>
         <md-select
-          placeholder="请选择城市"
+          placeholder="Select city"
           [(ngModel)]="_address.city"
           (change)="onCityChange()">
           <md-option *ngFor="let c of cities$ | async" [value]="c">
@@ -32,7 +32,7 @@ import {Address} from '../../domain';
       </div>
       <div>
         <md-select
-          placeholder="请选择区县"
+          placeholder="Select area"
           [(ngModel)]="_address.district"
           (change)="onDistrictChange()">
           <md-option *ngFor="let d of districts$ | async" [value]="d">
@@ -42,7 +42,7 @@ import {Address} from '../../domain';
       </div>
       <div class="street">
         <md-input-container class="full-width">
-          <input mdInput placeholder="街道地址" [(ngModel)]="_address.street" (change)="onStreetChange()">
+          <input mdInput placeholder="Select Address" [(ngModel)]="_address.street" (change)="onStreetChange()">
         </md-input-container>
       </div>
     </div>

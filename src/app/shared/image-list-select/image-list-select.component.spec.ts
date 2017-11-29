@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {MdGridListModule, MdIconModule} from '@angular/material';
-import {ImageListSelectComponent} from './';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MdGridListModule, MdIconModule } from '@angular/material';
+import { ImageListSelectComponent } from './';
 
 describe('ImageListSelectComponent', () => {
   let component: ImageListSelectComponent;

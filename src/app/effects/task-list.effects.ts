@@ -1,14 +1,14 @@
-import {Injectable} from '@angular/core';
-import {Actions, Effect, toPayload} from '@ngrx/effects';
-import {Action, Store} from '@ngrx/store';
-import {Observable} from 'rxjs/Observable';
-import {of} from 'rxjs/observable/of';
-import {TaskListService} from '../services';
+import { Injectable } from '@angular/core';
+import { Actions, Effect, toPayload } from '@ngrx/effects';
+import { Action, Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
+import { TaskListService } from '../services';
 import * as actions from '../actions/task-list.action';
 import * as prjActions from '../actions/project.action';
 import * as taskActions from '../actions/task.action';
 import * as fromRoot from '../reducers';
-import {Task, TaskList} from '../domain';
+import { Task, TaskList } from '../domain';
 
 @Injectable()
 export class TaskListEffects {

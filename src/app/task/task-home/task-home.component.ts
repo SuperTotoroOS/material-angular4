@@ -84,9 +84,9 @@ export class TaskHomeComponent implements OnDestroy {
 
     handleDelList(list: TaskList) {
       const confirm = {
-        title: '删除项目：',
-        content: '确认要删除该任务列表？',
-        confirmAction: '确认删除'
+        title: 'Delete List',
+        content: 'Are you sure to delete list？',
+        confirmAction: 'Confirm'
       };
       const dialogRef = this.dialog.open(ConfirmDialogComponent, {data: {dialog: confirm}});
 

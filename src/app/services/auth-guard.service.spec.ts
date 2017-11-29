@@ -1,10 +1,10 @@
-import {Component} from '@angular/core';
-import {async, inject, TestBed} from '@angular/core/testing';
-import {ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
-import {RouterTestingModule} from '@angular/router/testing';
-import {AuthGuardService} from './auth-guard.service';
-import {Store, StoreModule} from '@ngrx/store';
-import {getAuth, reducer, State} from '../reducers';
+import { Component } from '@angular/core';
+import { async, inject, TestBed } from '@angular/core/testing';
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AuthGuardService } from './auth-guard.service';
+import { Store, StoreModule } from '@ngrx/store';
+import { getAuth, reducer, State } from '../reducers';
 import * as authActions from '../actions/auth.action';
 
 const mockSnapshot: any = jasmine

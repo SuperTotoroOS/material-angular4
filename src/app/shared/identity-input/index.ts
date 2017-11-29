@@ -1,17 +1,17 @@
-import {ChangeDetectionStrategy, Component, forwardRef, OnInit, OnDestroy} from '@angular/core';
-import {ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {Subject} from 'rxjs/Subject';
-import {Observable} from 'rxjs/Observable';
-import {Subscription} from 'rxjs/Subscription';
-import {Identity, IdentityType} from '../../domain';
-import {isValidAddr, extractInfo} from '../../utils/identity.util';
-import {isValidDate} from '../../utils/date.util';
+import { ChangeDetectionStrategy, Component, forwardRef, OnInit, OnDestroy } from '@angular/core';
+import { ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Subject } from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
+import { Subscription } from 'rxjs/Subscription';
+import { Identity, IdentityType } from '../../domain';
+import { isValidAddr, extractInfo } from '../../utils/identity.util';
+import { isValidDate } from '../../utils/date.util';
 
 @Component({
   selector: 'app-indentity-input',
   template: `
     <div>
-      <md-select placeholder="证件类型" (change)="onIdTypeChange($event.value)" [(ngModel)]="identity.identityType">
+      <md-select placeholder="Documents type" (change)="onIdTypeChange($event.value)" [(ngModel)]="identity.identityType">
         <md-option *ngFor="let type of identityTypes" [value]="type.value" >
           {{type.label}}
         </md-option>
@@ -19,8 +19,8 @@ import {isValidDate} from '../../utils/date.util';
     </div>
     <div class="id-input">
       <md-input-container class="full-width">
-        <input mdInput type="text" placeholder="证件号码" (change)="onIdNoChange($event.target.value)" [(ngModel)]="identity.identityNo">
-        <md-error>证件号码输入有误</md-error>
+        <input mdInput type="text" placeholder="ID" (change)="onIdNoChange($event.target.value)" [(ngModel)]="identity.identityNo">
+        <md-error>Illegal ID</md-error>
       </md-input-container>
     </div>
   `,
@@ -52,11 +52,11 @@ import {isValidDate} from '../../utils/date.util';
 export class IdentityInputComponent implements ControlValueAccessor, OnInit, OnDestroy {
 
   identityTypes: {value: IdentityType, label: string}[] = [
-    {value: IdentityType.IdCard, label: '身份证'},
-    {value: IdentityType.Insurance, label: '医保'},
-    {value: IdentityType.Passport, label: '护照'},
-    {value: IdentityType.Military, label: '军官证'},
-    {value: IdentityType.Other, label: '其它'}
+    {value: IdentityType.IdCard, label: 'IdCard'},
+    {value: IdentityType.Insurance, label: 'Insurance'},
+    {value: IdentityType.Passport, label: 'Passport'},
+    {value: IdentityType.Military, label: 'Military'},
+    {value: IdentityType.Other, label: 'Other'}
   ];
   identity: Identity = {identityType: null, identityNo: null};
   private _idType = new Subject<IdentityType>();

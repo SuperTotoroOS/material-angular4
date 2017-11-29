@@ -1,8 +1,8 @@
-import {ChangeDetectionStrategy, Component, OnInit, forwardRef, Input, ViewChild} from '@angular/core';
-import {ControlValueAccessor, FormBuilder, FormGroup, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {Observable} from 'rxjs/Observable';
-import {UserService} from '../../services';
-import {User} from '../../domain';
+import { ChangeDetectionStrategy, Component, OnInit, forwardRef, Input, ViewChild } from '@angular/core';
+import { ControlValueAccessor, FormBuilder, FormGroup, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Observable } from 'rxjs/Observable';
+import { UserService } from '../../services';
+import { User } from '../../domain';
 
 @Component({
   selector: 'app-chips-list',
@@ -50,8 +50,8 @@ export class ChipsListComponent implements ControlValueAccessor, OnInit {
   // 'you are using blablabla that you're trying to access does not exist in the class declaration.'
   @ViewChild('autoMember') autoMember;
   @Input() multiple = true;
-  @Input() label = '添加/修改成员';
-  @Input() placeholderText = '请输入成员 email';
+  @Input() label = 'Add/update members';
+  @Input() placeholderText = 'Input memeber email';
   items: User[];
   chips: FormGroup;
   memberResults$: Observable<User[]>;

@@ -1,8 +1,8 @@
 import * as actions from '../actions/user.action';
 import * as authActions from '../actions/auth.action';
-import {covertArrToObj} from '../utils/reduer.util';
-import {User, Auth} from '../domain';
-import {createSelector} from 'reselect';
+import { covertArrToObj } from '../utils/reduer.util';
+import { User, Auth } from '../domain';
+import { createSelector } from 'reselect';
 
 export interface State {
   ids: string [];

@@ -1,5 +1,5 @@
-import {TaskVM, TaskListVM, ProjectVM} from '../vm';
-import {Task, TaskList, Project} from '../domain';
+import { TaskVM, TaskListVM, ProjectVM } from '../vm';
+import { Task, TaskList, Project } from '../domain';
 
 export const covertToTask = (taskVM: TaskVM): Task => {
   return {

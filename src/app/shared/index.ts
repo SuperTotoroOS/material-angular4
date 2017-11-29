@@ -1,6 +1,6 @@
-import {NgModule} from '@angular/core';
-import {ReactiveFormsModule, FormsModule} from '@angular/forms';
-import {CommonModule} from '@angular/common';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import {
   MdToolbarModule,
   MdSidenavModule,
@@ -26,13 +26,13 @@ import {
   MdSelectionModule,
   MdSlideToggleModule,
 } from '@angular/material';
-import {ConfirmDialogComponent} from './confirm-dialog';
-import {ImageListSelectComponent} from './image-list-select';
-import {ChipsListComponent} from './chips-list';
-import {IdentityInputComponent} from './identity-input';
-import {AreaListComponent} from './area-list';
-import {AgeInputComponent} from './age-input';
-import {DirectivesModule} from '../directives';
+import { ConfirmDialogComponent } from './confirm-dialog';
+import { ImageListSelectComponent } from './image-list-select';
+import { ChipsListComponent } from './chips-list';
+import { IdentityInputComponent } from './identity-input';
+import { AreaListComponent } from './area-list';
+import { AgeInputComponent } from './age-input';
+import { DirectivesModule } from '../directives';
 
 @NgModule({
   imports: [

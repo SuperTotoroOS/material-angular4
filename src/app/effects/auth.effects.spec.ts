@@ -1,10 +1,10 @@
-import {EffectsRunner, EffectsTestingModule} from '@ngrx/effects/testing';
+import { EffectsRunner, EffectsTestingModule } from '@ngrx/effects/testing';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/throw';
-import {Observable} from 'rxjs/Observable';
-import {fakeAsync, TestBed} from '@angular/core/testing';
-import {AuthEffects} from './auth.effects';
-import {AuthService} from '../services/auth.service';
+import { Observable } from 'rxjs/Observable';
+import { fakeAsync, TestBed } from '@angular/core/testing';
+import { AuthEffects } from './auth.effects';
+import { AuthService } from '../services/auth.service';
 import * as actions from '../actions/auth.action';
 
 describe('测试 AuthEffects', () => {

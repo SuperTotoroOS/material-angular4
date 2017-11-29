@@ -1,6 +1,6 @@
-import {TaskList, Project} from '../domain';
-import {createSelector} from 'reselect';
-import {covertArrToObj, buildObjFromArr} from '../utils/reduer.util';
+import { TaskList, Project } from '../domain';
+import { createSelector } from 'reselect';
+import { covertArrToObj, buildObjFromArr } from '../utils/reduer.util';
 import * as _ from 'lodash';
 import * as actions from '../actions/task-list.action';
 import * as prjActions from '../actions/project.action';

@@ -1,6 +1,6 @@
-import {Action} from '@ngrx/store';
-import {type} from '../utils/type.util';
-import {Err, Quote} from '../domain';
+import { Action } from '@ngrx/store';
+import { type } from '../utils/type.util';
+import { Err, Quote } from '../domain';
 
 export const ActionTypes = {
   QUOTE: type('[Quote] Quote'),

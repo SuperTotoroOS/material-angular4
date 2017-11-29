@@ -1,7 +1,7 @@
-import {Inject, Injectable} from '@angular/core';
-import {Headers, Http} from '@angular/http';
-import {Observable} from 'rxjs/Observable';
-import {Project, TaskList} from '../domain';
+import { Inject, Injectable } from '@angular/core';
+import { Headers, Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { Project, TaskList } from '../domain';
 import { concat } from 'rxjs/observable/concat';
 
 @Injectable()

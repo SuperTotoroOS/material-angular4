@@ -1,5 +1,5 @@
-import {Action} from '@ngrx/store';
-import {type} from '../utils/type.util';
+import { Action } from '@ngrx/store';
+import { type } from '../utils/type.util';
 
 export const ActionTypes = {
   SWITCH_THEME: type('[THEME] Switch Theme'),

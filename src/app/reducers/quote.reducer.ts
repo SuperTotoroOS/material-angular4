@@ -1,4 +1,4 @@
-import {Quote} from '../domain';
+import { Quote } from '../domain';
 import * as actions from '../actions/quote.action';
 
 export interface State {

@@ -1,13 +1,13 @@
-import {Injectable} from '@angular/core';
-import {Actions, Effect, toPayload} from '@ngrx/effects';
-import {Action, Store} from '@ngrx/store';
-import {Observable} from 'rxjs/Observable';
-import {of} from 'rxjs/observable/of';
-import {UserService} from '../services';
+import { Injectable } from '@angular/core';
+import { Actions, Effect, toPayload } from '@ngrx/effects';
+import { Action, Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+import { of} from 'rxjs/observable/of';
+import { UserService } from '../services';
 import * as actions from '../actions/user.action';
 import * as prjActions from '../actions/project.action';
 import * as fromRoot from '../reducers';
-import {Project} from '../domain';
+import { Project } from '../domain';
 
 @Injectable()
 export class UserEffects {

@@ -22,7 +22,7 @@ import {ControlValueAccessor, FormControl, NG_VALIDATORS, NG_VALUE_ACCESSOR} fro
 export class ImageListSelectComponent implements ControlValueAccessor {
 
   selected: string;
-  @Input() title = '选择封面：';
+  @Input() title = 'Select Cover';
   @Input() items: string[] = [];
   @Input() cols = 8;
   @Input() rowHeight = '64px';

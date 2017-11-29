@@ -1,9 +1,9 @@
-import {Inject, Injectable} from '@angular/core';
-import {Http} from '@angular/http';
-import {Observable} from 'rxjs/Observable';
-import {Task} from '../domain';
-import {CalendarEvent} from 'angular-calendar';
-import {endOfDay, startOfDay} from 'date-fns';
+import { Inject, Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { Task } from '../domain';
+import { CalendarEvent } from 'angular-calendar';
+import { endOfDay, startOfDay } from 'date-fns';
 
 const colors: any = {
   red: {

@@ -1,7 +1,7 @@
-import {Inject, Injectable} from '@angular/core';
-import {Http} from '@angular/http';
-import {Observable} from 'rxjs/Observable';
-import {Quote} from '../domain';
+import { Inject, Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { Quote } from '../domain';
 
 @Injectable()
 export class QuoteService {

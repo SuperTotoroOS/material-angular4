@@ -1,11 +1,11 @@
-import {Injectable} from '@angular/core';
-import {Actions, Effect, toPayload} from '@ngrx/effects';
-import {Action} from '@ngrx/store';
-import {go} from '@ngrx/router-store';
-import {Observable} from 'rxjs/Observable';
-import {of} from 'rxjs/observable/of';
+import { Injectable } from '@angular/core';
+import { Actions, Effect, toPayload } from '@ngrx/effects';
+import { Action } from '@ngrx/store';
+import { go } from '@ngrx/router-store';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 
-import {AuthService} from '../services';
+import { AuthService } from '../services';
 import * as actions from '../actions/auth.action';
 
 @Injectable()
